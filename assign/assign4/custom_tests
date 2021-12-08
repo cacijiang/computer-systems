@@ -1,0 +1,29 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to the CS107 website for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+
+# For the following five tests, I firstly test myls with "-a" flag on another folder.
+# Then, it is tested without flag. The next test is to input an invalid path. Then
+# I changed the path a bit to move one level back. The last test is to add "-z" flag.
+myls -a /afs/ir/class/cs107/samples
+myls /afs/.ir/users/c/a/cacikong/CS107/assign/assign4/tools
+myls /afs/.ir/users/c/a/cacikong/CS107/assign/assign4s
+myls /afs/.ir/users/c/a/cacikong/CS107/assign/assign4/..
+myls -z /afs/.ir/users/c/a/cacikong/CS107/assign/assign4
+# For the following four tests, firstly I test to see whether the key can be inserted
+# at the last index as edge case. Secondly, it is tested for the key already at the
+# last index. I also considered a case when the whole input list contains the same
+# elements. Last case is to test string case.
+test_binsert -i 8 3 2
+test_binsert -i 8 3 2 8
+test_binsert -i 5 4 4 4
+test_binsert -s "ss" "sa" "se" "sz"
+# For the following three tests, I tried mysort on a code file. Then I tried to add
+# "-n" flag on string file. For the last case, if there are mutiple sorting rules,
+# mysort should follow the latest input one.
+mysort util.c
+mysort -n samples/colors
+mysort -r -n -l samples/names

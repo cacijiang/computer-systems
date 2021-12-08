@@ -1,0 +1,26 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to cs107.stanford.edu/working-on-assignments.html for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+#
+# For sat, I tested two edge cases for bit input which are 4 and 64, and I also include
+# 16 to test the bit input in the range [4, 64]. For automata, I include the tests 
+# to spread out the input ruleset over the range [0, 255], including the edge cases.
+# For utf8, I tested the cases at each break point of the code points.
+
+sat 16 -32768 -32768
+automata 90
+utf8 0x20AC
+automata 77
+automata 150
+automata 10
+automata 0
+automata 255
+sat 4 -8 -1
+sat 64  -9223372036854775808 0
+sat 16
+utf8 0x0000
+utf8 0x0080
+utf8 0xffff

@@ -1,0 +1,16 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Each custom test is given on a single line using format:
+#
+#     executable  arg(s)
+#
+# The executable is the name of the program to run.
+# The args are optional. If given, they are treated as a sequence of space-separated
+# command-line arguments with which to invoke the executable program.
+#
+
+pig_latin duck
+pig_latin debugging
+pig_latin the quick brown fox jumped over the lazy dog
+pig_latin the 12th sheep jumped over the fence after the 11th sheep

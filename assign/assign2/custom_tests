@@ -1,0 +1,33 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to the "how to work on assignments" page on the course website for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+#
+# In addition to the tests in sanity check, I provided the following custom tests.
+# For myprintenv.c, firstly I added a test for SSH_CONNECTION to see if it works for key
+# containing "-". Then I added SSH_CLIENT and SSH_TTY to see if it works on two similar
+# arguments together.The last test includes an invalid in the middle of two valid keys.
+#
+# For tokenize.c, in the first case, the input string only contains one of the delimiters.
+# For the second test, I added additional argument for the size of buffer array, limiting it
+# to 3. Then I tested some edge cases. The third test does not include token, while the fourth
+# test does not include delimiter.
+#
+# For mywhich.c, the first test uses an invalid executable, while the second test mixes an
+# invalid executable in a bunch of valid ones.
+#
+
+myprintenv HOME
+myprintenv SSH_CONNECTION
+myprintenv SSH_CLIENT SSH_TTY
+myprintenv LANG CACI PATH
+tokenize ", " "red, green, blue,orange, yellow"
+tokenize "-=" "--red-green-blue-orange-yellow"
+tokenize "-" "red-green-blue-orange-yellow" 3
+tokenize "-" "---------"
+tokenize "" "red-green-blue-orange-yellow"
+mywhich
+mywhich caci
+mywhich lsattr ac caci aj

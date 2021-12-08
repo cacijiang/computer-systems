@@ -1,0 +1,19 @@
+# File: custom_tests
+# ------------------
+# This file contains a list of custom tests to be run by the sanity check tool.
+# Refer to the CS107 resources page for more information.
+#
+# Below are example custom tests, you can edit this file to change or add new tests.
+
+samples/atm 40 $USER
+
+# IMPORTANT NOTE: every test line must start with EXACTLY "samples/atm", as in the above example.
+# Any comments must be on their own line, prefixed with a #.
+
+# Part 1 Code Study: Security and Robustness
+# case a
+samples/atm 108 cacikong
+# case b
+samples/atm 40 zzz
+# case c
+samples/atm 300 `perl -e 'print "a"x31,"\x10\x0c\x40"'` 0

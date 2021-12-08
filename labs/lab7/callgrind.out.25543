@@ -1,0 +1,280 @@
+version: 1
+creator: callgrind-3.11.0
+pid: 25543
+cmd:  ./copy
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 37196
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 10028
+
+
+ob=(3) /lib/x86_64-linux-gnu/libc-2.23.so
+fl=(68) /build/glibc-Cl5G7W/glibc-2.23/csu/../csu/libc-start.c
+fn=(266) (below main)
+cob=(5) /afs/.ir.stanford.edu/users/c/a/cacikong/CS107/labs/lab7/copy
+cfi=(73) /afs/.ir/users/c/a/cacikong/CS107/labs/lab7/copy.c
+cfn=(292) main
+calls=1 91 
+291 10028
+
+fl=(76) /build/glibc-Cl5G7W/glibc-2.23/string/../sysdeps/x86_64/multiarch/memcpy-avx-unaligned.S
+fn=(304) __memcpy_avx_unaligned
+41 129
++4 129
++1 129
++1 128
++1 128
++86 128
++1 128
++1 128
++1 128
++1 128
++1 128
++1 128
++36 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
+-11 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
+
+fn=(310) __memmove_avx_unaligned
+41 1
++4 1
++1 1
+171 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
+-11 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 6
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
+
+ob=(1) /lib/x86_64-linux-gnu/ld-2.23.so
+fl=(66) /build/glibc-Cl5G7W/glibc-2.23/elf/../sysdeps/x86_64/dl-trampoline.h
+fn=(260) _dl_runtime_resolve_avx
+cob=(3)
+cfi=(68)
+cfn=(266)
+calls=1 134 
+159 10028
+
+fl=(1) ???
+fn=(0) 0x0000000000000c30
+cob=(5)
+cfi=(65) ???
+cfn=(252) _start
+calls=1 0 
+0 10028
+
+ob=(5)
+fl=(73)
+fn=(384) copy_intloop
+24 1
++4 1
++2 2
++1 512
+-1 770
++4 1
+
+fn=(388) copy_memloop
+48 7
++1 2
++3 2
++2 256
+-1 384
+cob=(3)
+cfi=(76)
+cfn=(304)
+calls=128 -12 
+* 1536
+* 128
+-1 386
++5 7
+
+fn=(292)
+cfn=(392) copy_memcpy
+calls=1 59 
+97 128
+cfn=(390) copy_memmove
+calls=1 63 
+97 132
+cfn=(388)
+calls=1 48 
+97 2708
+cfn=(386) copy_longloop
+calls=1 36 
+97 647
+cfn=(384)
+calls=1 24 
+97 1287
+cfn=(312) copy_charloop
+calls=1 13 
+97 5126
+
+fn=(390)
+63 1
++1 1
+cob=(3)
+cfi=(76)
+cfn=(310)
+calls=1 -23 
+* 127
+* 1
++1 2
+
+fn=(312)
+13 1
++5 2
++1 2048
+-1 3074
++4 1
+
+fn=(386)
+36 1
++4 1
++2 2
++1 256
+-1 386
++4 1
+
+fn=(392)
+59 1
++1 1
+cob=(3)
+cfi=(76)
+cfn=(304)
+calls=1 -19 
+* 123
+* 1
++1 2
+
+fl=(65)
+fn=(252)
+cob=(1)
+cfi=(66)
+cfn=(260)
+calls=1 64 
+0 10028
+
+totals: 10028

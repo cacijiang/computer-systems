@@ -1,0 +1,4 @@
+Debugging is anticipated with distaste, performed with reluctance, and bragged about forever.
+8590 4294967281
+32 smurre
+0x10001 0x20000 0x10000 0xffff 0x7cc5 0x100 0x8 0x1
